@@ -69,8 +69,8 @@ Diagram shows how Azure AI Foundry, Semantic Kernel, and Azure AI Search interac
 |Topic | Duration
 |-----|-------|
 |Welcome & Overview |15 minutes	|
-|Introduction to Agent AI systems | 30 minutes | 
-|Agentic AI design patterns | 30 minutes | 
+|Introduction to Agentic AI systems | 30 minutes | 
+|AI Agents design patterns | 30 minutes | 
 |Multi-Agents orchestration with Semantic Kernel | 30 minutes |
 |GenAIOps | 30 minutes
 |Hands-on labs	| 150 minutes |

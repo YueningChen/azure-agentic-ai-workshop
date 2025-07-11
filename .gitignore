@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs and local data
+*.log
+*.sqlite3
+
+# Azure-specific
+*.azure/
+*.azureml/
+
+# Python environment files
+Pipfile.lock
+poetry.lock
+
+# Node.js (if applicable)
+node_modules/
+npm-debug.log*
+
+# dotenv environment variables
+.env.local
+.env.*.local

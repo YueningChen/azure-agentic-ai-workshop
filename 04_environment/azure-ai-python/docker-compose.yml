@@ -1,0 +1,13 @@
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: azure-ai-python
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash
+
+
+

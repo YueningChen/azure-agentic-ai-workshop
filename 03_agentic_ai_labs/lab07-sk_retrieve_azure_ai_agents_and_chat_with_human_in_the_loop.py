@@ -47,7 +47,7 @@ async def get_agents(client) -> list[Agent]:
 
 
     writer_definition = await client.agents.get_agent(
-        agent_id="asst_yYuaDFUs1blChVDHIl0Tlzzq",
+        agent_id="asst_GScTtjj5TElXfH6BOimYX3OZ",
     )
 
     writer = AzureAIAgent(
@@ -56,7 +56,7 @@ async def get_agents(client) -> list[Agent]:
     )
 
     reviewer_definition = await client.agents.get_agent(
-        agent_id="asst_K60zq3DPPurtd2Rbg2xuC7uz",
+        agent_id="asst_cieudXhiHZ6jsyw49wCF6RiL",
     )
 
     reviewer = AzureAIAgent(

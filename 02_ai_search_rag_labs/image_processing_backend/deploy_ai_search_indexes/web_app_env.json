@@ -1,0 +1,60 @@
+{
+    "name": "AIService__DocumentIntelligence__Endpoint",
+    "value": "<Your Document Intelligence Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "AIService__AzureSearchOptions__Endpoint",
+    "value": "<Your AI Search Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "AIService__AzureSearchOptions__Key",
+    "value": "<Your AI Search Key>",
+    "slotSetting": false
+},
+{
+    "name": "AIService__AzureSearchOptions__IndexName",
+    "value": "<prefix>-index",
+    "slotSetting": false
+},
+{
+    "name": "AIService__AzureSearchOptions__SemanticConfigurationName",
+    "value": "<prefix>-semantic-config",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__Key",
+    "value": "<Your OpenAI Key>",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__ApiVersion",
+    "value": "2025-04-01-preview",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__Endpoint",
+    "value": "<Your OpenAI Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__MiniCompletionDeployment",
+    "value": "gpt-4.1-mini",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__CompletionDeployment",
+    "value": "gpt-4.1",
+    "slotSetting": false
+},
+{
+    "name": "StorageAccount__Name",
+    "value": "<YOUR_STORAGE_ACCOUNT_NAME>",
+    "slotSetting": false
+},
+{
+    "name": "System_Prompt",
+    "value": "You are a senior data analyst at a financial services company who specialises in writing data driven insights to user's questions. Take the user's question, and the context from the search results, write response that clear addresses the user's question. The user may want to invest in company, therefore focus on providing data driven insights and a critical mindset to answering the question. Format the answer in Markdown to aid understanding. Only use information from the search results to answer the user's question. Keep responses consise and to the point. Answer in no more than 3 paragraphs. If any of the retrieved figures would be useful for the user then display the figure retrieved from the search index by adding <figure ChunkId='<ChunkId for selected figure>' FigureId='<Original FigureId for selected figure from research tool call>'> to the end of your response. Do not generate the chunk id and figure id, always use the original ones from the search tool call. Never innovate your own answer, only use the information that has been provided to you in the context. And if you don't have an answer to the user's question, then say 'I don't know'.",
+    "slotSetting": false
+}

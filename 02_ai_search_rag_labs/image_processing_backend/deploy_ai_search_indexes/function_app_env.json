@@ -1,0 +1,45 @@
+{
+    "name": "AIService__DocumentIntelligence__Endpoint",
+    "value": "<Your Document Intelligence Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "AZURE_AISEARCH_ENDPOINT",
+    "value": "<Your AI Search Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "AZURE_AISEARCH_KEY",
+    "value": "<Your AI Search Key>",
+    "slotSetting": false
+},
+{
+    "name": "AZURE_OPENAI_ENDPOINT",
+    "value": "<Your OpenAI Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "AZURE_OPENAI_KEY",
+    "value": "<Your OpenAI Key>",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__ApiVersion",
+    "value": "2024-10-21",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__Endpoint",
+    "value": "<Your OpenAI Endpoint>",
+    "slotSetting": false
+},
+{
+    "name": "OpenAI__MiniCompletionDeployment",
+    "value": "gpt-4.1-mini",
+    "slotSetting": false
+},
+{
+    "name": "StorageAccount__Name",
+    "value": "<YOUR_STORAGE_ACCOUNT_NAME>",
+    "slotSetting": false
+}

@@ -82,7 +82,7 @@ In this lab, we will implement a Retrieval-Augmented Generation (RAG) system tha
 
 ## Step 4: Upload Data to the Container
 
-1. If you haven't already, download the sample data file [bdo-unibank-2024-annual-report.pdf](examples/bdo-unibank-2024-annual-report.pdf) to your local machine.
+1. If you haven't already, download the sample data file [bdo-unibank-2024-annual-report.pdf](example_docs/bdo-unibank-2024-annual-report.pdf) to your local machine.
 2. In the Azure Portal, navigate to the storage account you created.
 3. Click on the container you just created (e.g., `advanced-rag-data`).
 4. Click on **Upload** to upload files to the container.
@@ -131,7 +131,7 @@ In this lab, we will implement a Retrieval-Augmented Generation (RAG) system tha
 4. Copy the content of the `function_app_env.json` file.
 5. In the Azure Portal, navigate to your Function App.
 6. In the left-hand menu, click on **Environment variables** under the **Settings** section and choose **Advanced edit**.
-   [Function App Environment Variables](images/function_app_environment_variables.png)
+   ![Function App Environment Variables](images/function_app_environment_variables.png)
 7. Paste the content of the `function_app_env.json` file into the editor within the array and make sure the content is well formed JSON.
 8. Click **Save** to apply the changes. When saved successfully, you will see all the values listed in the environment variables.
     ![Function App Environment Variables Saved](images/function_app_environment_variables_saved.png)
@@ -159,7 +159,7 @@ In this lab, we will implement a Retrieval-Augmented Generation (RAG) system tha
     az login
     ```
 
-3. Run the following command to deploy the Function App. Make sure to replace `<yourfunctionappname>` with your own Function App name.
+3. Run the following command to deploy the Function App. Make sure to replace `<yourfunctionappname>` with your own Function App name that you created in Step 1.
 
    ```bash
     func azure functionapp publish <yourfunctionappname>

@@ -23,6 +23,10 @@ This workshop is ideal for:
 | **Azure AI Search**  | Enterprise-grade search engine to ground agents with contextual knowledge |
 | **Semantic Kernel**  | SDK for orchestrating AI plugins, memory, and planning in .NET or Python  |
 
+## Hands-On Labs
+![](./01_intro/images/labs.jpg)
+### [Agentic AI Labs PDF link](./agentic_ai_labs.pdf)
+
 ## Setup Instructions
 
 ### Prerequisites
@@ -109,11 +113,6 @@ pip install -r requirements.txt
 ├── sample.env
 └── README.md
 ```
-## Architecture Diagram
-docs/agentic-ai-architecture.png
-
-Diagram shows how Azure AI Foundry, Semantic Kernel, and Azure AI Search interact to power intelligent agents.
-
 ## Workshop Agenda
 
 |Topic | Duration
@@ -124,6 +123,11 @@ Diagram shows how Azure AI Foundry, Semantic Kernel, and Azure AI Search interac
 |Multi-Agents orchestration with Semantic Kernel | 30 minutes |
 |GenAIOps | 30 minutes
 |Hands-on labs	| 150 minutes |
+
+## Resources
+- https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview
+- https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/?pivots=programming-language-python
+- https://github.com/Azure/azure-ai-agents-labs
 
 
 ## Feedback & Contributions

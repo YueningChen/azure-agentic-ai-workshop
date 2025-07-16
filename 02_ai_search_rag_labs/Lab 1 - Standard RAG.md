@@ -2,20 +2,7 @@
 
 In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) system using a simple dataset. The goal is to use the built-in Vectorization capabilities of Azure AI Search to vectorize our data and then use it to answer questions.
 
-## Step 1: Create a Resource Group
-
-1. Go to the [Azure Portal](https://portal.azure.com/).
-2. Click on "Resource groups" under **Navigate**.
-    ![Resource Groups](images/resource_groups.png)
-3. Click on **+ Create** to create a new resource group.
-4. Fill in the required details:
-   - Subscription: Select the Azure subscription assigned to you.
-   - Resource group name: Enter a unique name for your resource group. Preferably use a name that is identifiable to you, such as your name or initials. (e.g. `<yourname>-Lab-RG`)
-   - Region: For the region choose **(Europe) Sweden Central**.
-   ![Create Resource Group](images/create_resource_group.png)
-5. Click **Review + create** and then **Create** to provision the resource group.
-
-## Step 2: Set Up Azure Storage Account
+## Step 1: Set Up Azure Storage Account
 
 1. Click Home in the Azure Portal to return to the main dashboard.
 2. Click on "Create a resource" and select "Storage account".
@@ -30,7 +17,7 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
    ![Create Storage Account](images/create_storage_account.png)
 4. Click **Review + create** and then **Create** to provision the storage account.
 
-### Step 2.1: Create a Container in the Storage Account
+### Step 1.1: Create a Container in the Storage Account
 
 1. Navigate to the storage account you just created.
 2. In the left-hand menu, click on **Containers** under the **Data storage** section.
@@ -41,9 +28,9 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
 5. Click **Create** to create the container.
    ![Create SA Container](images/create_sa_container.png)
 
-### Step 2.2: Upload Data to the Container
+### Step 1.2: Upload Data to the Container
 
-1. Download the sample data file [bdo-unibank-2024-annual-report.pdf](examples/bdo-unibank-2024-annual-report.pdf) to your local machine.
+1. Download the sample data file [bdo-unibank-2024-annual-report.pdf](example_docs/bdo-unibank-2024-annual-report.pdf) to your local machine.
 2. In the Azure Portal, navigate to the storage account you created.
 3. Click on the container you just created (e.g., `standard-rag-data`).
 4. Click on **Upload** to upload files to the container.
@@ -51,7 +38,7 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
 6. Click **Upload** to upload the file to the container.
    ![Upload Data to Container](images/upload_data_to_container.png)
 
-### Step 2.3: Set Up Managed Identity access to Azure Storage Account for Azure AI Search
+### Step 1.3: Set Up Managed Identity access to Azure Storage Account for Azure AI Search
 
 1. Navigate to the Storage account you created.
 2. In the left-hand menu, click on **Access Control (IAM)**.
@@ -64,7 +51,7 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
     ![SA Select AI Search Resource](images/sa_ai_search_mi_permission.png)
 7. Click **Review + assign** to review the role assignment and click **Review + assign** to apply the changes.
 
-## Step 3: Create Search Index in Azure AI Search
+## Step 2: Create Search Index in Azure AI Search
 
 1. Click Home in the Azure Portal to return to the main dashboard.
 2. Enter "Azure AI Search" in the search bar and select it from the results.
@@ -83,7 +70,7 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
 8. Under **Vectorize your text**:
     - Choose **AI Foundry Hub catalog models** for Kind.
     - Choose the subscription.
-    - Choose the **AI Foundry Project** that has been assigned to you.
+    - Choose the **AI Foundry Project** that you created earlier.
     - Choose the **Model deployment** as `text-embedding-ada-002`.
     - Choose **API Key** as the authentication type.
     - Acknowledge the cost for using the AI Foundry Project and click **Next**.
@@ -103,7 +90,7 @@ In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) s
 13. It will take you to the **Search explorer** page where you can test your search index by clicking on the **Search** button.
     ![AI Search Explorer](images/ai_search_explorer.png)
 
-## Step 4: Chat with your data on Chat Playground
+## Step 3: Chat with your data on Chat Playground
 
 1. Navigate to [Azure AI Foundry](https://ai.azure.com/).
 2. If you are visiting for the first time, choose the right project from the list of resources.

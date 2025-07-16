@@ -54,21 +54,10 @@ git clone https://github.com/YueningChen/azure-agentic-ai-workshop.git
 cd azure-agentic-ai-workshop
 ```
 
-### Environment Setup (Docker Container)
+### Environment Setup (.devcontainer)
 
-#### Pre-requisites: 
-- #### Install Docker: 
+#### Working In Progress
 
-   Follow the installation instructions for your operating system (Windows, macOS, or Linux).: https://docs.docker.com/engine/install/
- 
-#### Option 1. Pull azure-ai-agent-ws image from Azure Container Registry:
-```bash
-
-```
-#### 2. Build and run docker container from the docker context. 
-```bash
-
-```
 
 
 ### Environment Setup (Local)

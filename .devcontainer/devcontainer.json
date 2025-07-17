@@ -17,8 +17,5 @@
       }
     }
   },
-  "features": {
-    "ghcr.io/devcontainers-contrib/features/black:2": {}
-  },
   "name": "Dev Container"
 }

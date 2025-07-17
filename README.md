@@ -23,6 +23,10 @@ This workshop is ideal for:
 | **Azure AI Search**  | Enterprise-grade search engine to ground agents with contextual knowledge |
 | **Semantic Kernel**  | SDK for orchestrating AI plugins, memory, and planning in .NET or Python  |
 
+## Hands-On Labs
+![](./01_intro/images/labs.jpg)
+### [Agentic AI Labs PDF link](./agentic_ai_labs.pdf)
+
 ## Setup Instructions
 
 ### Prerequisites
@@ -50,21 +54,10 @@ git clone https://github.com/YueningChen/azure-agentic-ai-workshop.git
 cd azure-agentic-ai-workshop
 ```
 
-### Environment Setup (Docker Container)
+### Environment Setup (.devcontainer)
 
-#### Pre-requisites: 
-- #### Install Docker: 
+#### Working In Progress
 
-   Follow the installation instructions for your operating system (Windows, macOS, or Linux).: https://docs.docker.com/engine/install/
- 
-#### Option 1. Pull azure-ai-agent-ws image from Azure Container Registry:
-```bash
-
-```
-#### 2. Build and run docker container from the docker context. 
-```bash
-
-```
 
 
 ### Environment Setup (Local)
@@ -109,11 +102,6 @@ pip install -r requirements.txt
 ├── sample.env
 └── README.md
 ```
-## Architecture Diagram
-docs/agentic-ai-architecture.png
-
-Diagram shows how Azure AI Foundry, Semantic Kernel, and Azure AI Search interact to power intelligent agents.
-
 ## Workshop Agenda
 
 |Topic | Duration
@@ -124,6 +112,11 @@ Diagram shows how Azure AI Foundry, Semantic Kernel, and Azure AI Search interac
 |Multi-Agents orchestration with Semantic Kernel | 30 minutes |
 |GenAIOps | 30 minutes
 |Hands-on labs	| 150 minutes |
+
+## Resources
+- https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview
+- https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/?pivots=programming-language-python
+- https://github.com/Azure/azure-ai-agents-labs
 
 
 ## Feedback & Contributions

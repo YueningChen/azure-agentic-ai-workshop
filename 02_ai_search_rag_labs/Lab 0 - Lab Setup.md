@@ -50,5 +50,18 @@ In this lab, you will set up the environment for the Azure Agentic AI workshop.
 7. Repeat steps 2-6 to deploy the **text-embedding-ada-002** model as well. Make sure to set the deployment name to `text-embedding-ada-002` and the tokens per minute rate limit to **150K**.
     ![Deploy text-embedding-ada-002 Model](images/deploy_text-embedding-ada-002.png)
 
+## Step 4: Create Azure AI Search
 
-We have now set up the Azure AI Foundry project and deployed the necessary models. You are ready to proceed with the labs in this workshop.
+1. In the Azure Portal, con the top search bar, enter **AI Search** and choose **AI Search** from the dropdown.
+    ![Search for AI Search](images/find_ai_search_service.png)
+2. Choose **+ Create** to create a new AI Search service.
+3. Fill in the required details in Basics tab:
+   - Subscription: Select the Azure subscription assigned to you.
+   - Resource group: Select the resource group you created earlier.
+   - Region: Choose **(Europe) Sweden Central**.
+   - Name: Enter a unique name for your AI Search service (e.g., `ailabs-search-<yourname>`).
+   - Pricing tier: Click **Change Pricing Tier** and choose **Basic**.
+   ![Create AI Search Service](images/create_ai_search_service.png)
+4. Click **Review + create**, review the settings and click **Create**.
+
+We have now set up the Azure AI Foundry project, deployed the necessary models, and created the AI Search service. You are ready to proceed with the labs in this workshop.

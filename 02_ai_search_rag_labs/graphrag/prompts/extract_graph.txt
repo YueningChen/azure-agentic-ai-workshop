@@ -1,0 +1,311 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: One of the following types: [credit_union, member, board_of_directors, volunteer, staff, branch, financial_report, foundation, scholarship, grant, loan, community_involvement, philanthropy, financial_service, governance_structure, membership, survey_tool, digital_banking, mobile_app, financial_education, non_profit, charitable_organization, investment, asset, liability, equity, operating_expense, net_income, audit_committee, regulatory_agency, financial_statement, real_estate, mortgage, credit_card, consumer_loan, vehicle_loan, retirement_plan, 401k_plan, lease, property_and_equipment, community_event, partnership, fraud_protection, technology_infrastructure, military_banking, scholarship_program, financial_literacy, youth_program, housing_initiative, food_drive, employee, customer_experience, awards_and_recognition]
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: an integer score between 1 to 10, indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in English as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into English, just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+entity_types: [credit_union, member, board_of_directors, volunteer, staff, branch, financial_report, foundation, scholarship, grant, loan, community_involvement, philanthropy, financial_service, governance_structure, membership, survey_tool, digital_banking, mobile_app, financial_education, non_profit, charitable_organization, investment, asset, liability, equity, operating_expense, net_income, audit_committee, regulatory_agency, financial_statement, real_estate, mortgage, credit_card, consumer_loan, vehicle_loan, retirement_plan, 401k_plan, lease, property_and_equipment, community_event, partnership, fraud_protection, technology_infrastructure, military_banking, scholarship_program, financial_literacy, youth_program, housing_initiative, food_drive, employee, customer_experience, awards_and_recognition]
+text:
+ we work to expand and enhance our product and service offerings, our fiscal strength is also a top focus to ensure that our Credit Union remains safe, sound, and well-positioned to
+4
+2024 SECU Annual Report
+2024 SECU Annual Report
+5
+THERE IS A DIFFERENCE
+THERE IS A DIFFERENCE
+serve you now and in the future. Our assets and earnings were strong as noted in our full financial report, and our operating expenses were well-managed, demonstrating good stewardship of your money. We were also thrilled to welcome thousands of new members to our Credit Union family, up nearly 70,000 from 2023. This growth has been consistent year over year.
+That cooperative spirit also drives us to make a difference in our communities, as we unite for a common good to uplift our friends, neighbors, and fellow North Carolinians through community involvement and philanthropic efforts. SECU members, staff, and volunteers joined forces to collect school supplies for teachers and students, food to help fill our local pantries, and toys and gifts for North Carolina children and families to have a brighter holiday season. They also gave of their time to volunteer with local non-profits to make a positive impact for others. In just the first part of 2024, SECU team members logged more than 8,000 volunteer hours to give back to their communities.
+Speaking of impact, I must take a moment to highlight our incredible member-funded SECU Foundation, which is the largest charitable organization in the credit union industry. Established in 2004, SECU Foundation is celebrating a major milestone - its 20th anniversary of transformative work in our great state. To date, the Foundation has committed over $300 million in scholarships, grants, and loans for education, housing, healthcare, and human services initiatives to benefit the people and communities in all 100 North Carolina counties. Through your generosity, SECU Foundation is creating positive and lasting change, and I encourage you to visit www. ncsecufoundation.org to learn even more about this important work.
+I have been a proud member of SECU since 1996 and on the Board of Directors since 2016. I am truly honored to serve our cooperative and provide representation for my fellow members. In closing, I want to give a heartfelt thank you to our dedicated staff of over 8,000 who serve in SECU's 275 branches, the Member Services Support Center, and operations departments positioned all across North Carolina. I, along with my fellow Board members, also offer our sincere gratitude to the more than 3,000 SECU volunteers serving on committees and branch Advisory Boards. We appreciate all that you do to represent our members and SECU. And to our 2.8 million members, thank you for your membership and your support. You are at the heart of all that we do, and you are the difference for SECU!
+Sincerely, minin
+Mona Moon Chair, SECU Board of Directors
+The Cooperative Difference
+Born out of compassion for others and the desire for positive change, State Employees' Credit Union was formed by 17 individuals on June 4, 1937, in the basement of the Agriculture Building in Raleigh, North Carolina. After watching their co-workers, family, and friends being taken advantage of by dishonest lenders, our founders knew there was a better way - one that could make a real difference. In a bold move, they pooled their resources, a total of $437, and created a trusted place where fellow state employees and their families could save and borrow money at fair and equitable rates for all.
+1937
+2024
+17 MEMBERS
+2.8M MEMBERS
+$437 ASSETS
+$56B ASSETS
+Since the beginning, SECU has been grounded in the philosophy of People Helping People® with a mission of service - to be the trusted provider of financial services to every eligible member and to enhance the value of their lives and financial well-being while maintaining our fiscal strength. A lot has changed in the last 87 years, as much work has been done to enhance and expand SECU's products, services, and delivery channels to best meet members' constantly evolving needs. However, through it all, the philosophy, mission, and member-driven focus have remained steadfast, and the cooperative difference is highlighted throughout the pages of this 2024 Annual Report to the Membership.
+6
+2024 SECU Annual Report
+2024 SECU Annual Report
+7
+THERE IS A DIFFERENCE
+Listening To Members ...
+Roadshow in Lenoir, North Carolina
+The trusted relationships built with members since 1937 are foundational to the success of SECU. As a member-owned cooperative, gathering feedback from members is central to helping guide the Board and SECU leadership to make decisions that best serve the needs of all members. To enhance member communications, SECU implemented even more feedback tools over the past year. The Credit Union now has the capability to email members who have an active email address on file, helping to provide more information through e-newsletters, important notices, and marketing messages highlighting new and improved offerings. Over 1.2 million members are currently receiving these emails, and the goal is to expand that distribution to even more of SECU's 2.8 million members.
+SECU also began a graduated rollout of a new chat feature with the SECU Mobile App to complement its online and direct communications with members. Chat is currently available 8:30 a.m. to 5:30 p.m. Monday-Friday with plans to expand availability in the coming year.
+A new member survey tool was also implemented that provides continuous feedback through SECU's various service channels. In addition to gaining greater insight into member satisfaction, this tool has been helpful with gathering input on specific topics such as the proposed changes to SECU's Board Election Policies and Procedures that were approved by the Board
+------------------------
+output:
+("entity"{tuple_delimiter}SECU{tuple_delimiter}credit_union{tuple_delimiter}State Employees' Credit Union (SECU) is a member-owned cooperative founded in 1937 in Raleigh, North Carolina, with a mission to provide trusted financial services to its members and enhance their financial well-being. It has grown to serve 2.8 million members with $56 billion in assets and operates 275 branches across North Carolina.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU FOUNDATION{tuple_delimiter}foundation{tuple_delimiter}The SECU Foundation is the largest charitable organization in the credit union industry, established in 2004. It has committed over $300 million in scholarships, grants, and loans for education, housing, healthcare, and human services initiatives across North Carolina's 100 counties.)
+{record_delimiter}
+("entity"{tuple_delimiter}MONA MOON{tuple_delimiter}board_of_directors{tuple_delimiter}Mona Moon is the Chair of SECU's Board of Directors, a member since 1996, and has served on the Board since 2016. She represents SECU members and oversees governance activities.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU MEMBERS{tuple_delimiter}membership{tuple_delimiter}SECU serves 2.8 million members, who are at the heart of its operations. Members contribute to the cooperative's growth and success through their participation and feedback.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU STAFF{tuple_delimiter}staff{tuple_delimiter}SECU employs over 8,000 staff members who work in branches, the Member Services Support Center, and operations departments across North Carolina to serve members and support the credit union's mission.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU VOLUNTEERS{tuple_delimiter}volunteer{tuple_delimiter}SECU has over 3,000 volunteers who serve on committees and branch Advisory Boards, contributing their time and efforts to represent members and support the credit union's initiatives.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU BRANCHES{tuple_delimiter}branch{tuple_delimiter}SECU operates 275 branches across North Carolina, providing financial services and support to its members in local communities.)
+{record_delimiter}
+("entity"{tuple_delimiter}FINANCIAL REPORT{tuple_delimiter}financial_report{tuple_delimiter}SECU's financial report highlights its strong assets, earnings, and well-managed operating expenses, demonstrating fiscal strength and stewardship of members' funds.)
+{record_delimiter}
+("entity"{tuple_delimiter}COMMUNITY INVOLVEMENT{tuple_delimiter}community_involvement{tuple_delimiter}SECU engages in community involvement through initiatives such as collecting school supplies, food, and holiday gifts, as well as volunteering with local non-profits to support North Carolina communities.)
+{record_delimiter}
+("entity"{tuple_delimiter}PHILANTHROPY{tuple_delimiter}philanthropy{tuple_delimiter}SECU's philanthropic efforts include supporting local communities through donations, volunteerism, and partnerships with non-profits to create positive impacts.)
+{record_delimiter}
+("entity"{tuple_delimiter}SCHOLARSHIPS{tuple_delimiter}scholarship{tuple_delimiter}SECU Foundation provides scholarships to support education and help students achieve their academic goals across North Carolina.)
+{record_delimiter}
+("entity"{tuple_delimiter}GRANTS{tuple_delimiter}grant{tuple_delimiter}SECU Foundation offers grants to support housing, healthcare, education, and human services initiatives in North Carolina communities.)
+{record_delimiter}
+("entity"{tuple_delimiter}LOANS{tuple_delimiter}loan{tuple_delimiter}SECU Foundation provides loans to support various community initiatives, including housing and education projects.)
+{record_delimiter}
+("entity"{tuple_delimiter}SURVEY TOOL{tuple_delimiter}survey_tool{tuple_delimiter}SECU implemented a new survey tool to gather continuous feedback from members, providing insights into member satisfaction and input on specific topics such as Board Election Policies and Procedures.)
+{record_delimiter}
+("entity"{tuple_delimiter}SECU MOBILE APP{tuple_delimiter}mobile_app{tuple_delimiter}The SECU Mobile App includes a new chat feature to enhance communication with members, available during business hours with plans for expanded availability.)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU FOUNDATION{tuple_delimiter}SECU Foundation is a member-funded initiative of SECU, supporting charitable and community-focused projects across North Carolina{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU MEMBERS{tuple_delimiter}SECU is a member-owned cooperative that serves and is guided by its 2.8 million members{tuple_delimiter}10)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU STAFF{tuple_delimiter}SECU staff members are essential to delivering services and supporting the credit union's mission{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU VOLUNTEERS{tuple_delimiter}SECU volunteers contribute their time and efforts to support the credit union's initiatives and represent members{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU BRANCHES{tuple_delimiter}SECU operates 275 branches to provide financial services to members across North Carolina{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}FINANCIAL REPORT{tuple_delimiter}SECU's financial report demonstrates its fiscal strength and stewardship of members' funds{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}COMMUNITY INVOLVEMENT{tuple_delimiter}SECU engages in community involvement to support local communities and create positive impacts{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}PHILANTHROPY{tuple_delimiter}SECU's philanthropic efforts align with its mission to support communities and create positive change{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU FOUNDATION{tuple_delimiter}SCHOLARSHIPS{tuple_delimiter}SECU Foundation provides scholarships to support education in North Carolina{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU FOUNDATION{tuple_delimiter}GRANTS{tuple_delimiter}SECU Foundation offers grants to support community initiatives in housing, healthcare, and education{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU FOUNDATION{tuple_delimiter}LOANS{tuple_delimiter}SECU Foundation provides loans to support community-focused projects{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SURVEY TOOL{tuple_delimiter}SECU implemented a survey tool to gather feedback and improve member satisfaction{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}SECU{tuple_delimiter}SECU MOBILE APP{tuple_delimiter}The SECU Mobile App enhances communication with members through its new chat feature{tuple_delimiter}8)
+{completion_delimiter}
+#############################
+
+
+Example 2:
+
+entity_types: [credit_union, member, board_of_directors, volunteer, staff, branch, financial_report, foundation, scholarship, grant, loan, community_involvement, philanthropy, financial_service, governance_structure, membership, survey_tool, digital_banking, mobile_app, financial_education, non_profit, charitable_organization, investment, asset, liability, equity, operating_expense, net_income, audit_committee, regulatory_agency, financial_statement, real_estate, mortgage, credit_card, consumer_loan, vehicle_loan, retirement_plan, 401k_plan, lease, property_and_equipment, community_event, partnership, fraud_protection, technology_infrastructure, military_banking, scholarship_program, financial_literacy, youth_program, housing_initiative, food_drive, employee, customer_experience, awards_and_recognition]
+text:
+----------+----------+----------+
+| Occupancy                                | 13,948   | 13,344   |
++------------------------------------------+----------+----------+
+| Education and promotional                | 25,896   | 18,209   |
++------------------------------------------+----------+----------+
+| Professional services                    | 16,252   | 12,313   |
++------------------------------------------+----------+----------+
+| Total non-interest expenses              | $276,130 | $242,286 |
++------------------------------------------+----------+----------+
+| Net income                               | $47,527  | $46,673  |
++------------------------------------------+----------+----------+
+
+
+Table 3 (36 rows × 2 columns):
++-------------------------------------+----------------------------------------+
+| Linda Armyn                         | Anthony J. Edelman                     |
++-------------------------------------+----------------------------------------+
+| President & CEO                     | VP Support Services                    |
++-------------------------------------+----------------------------------------+
+| Tom Acton                           | Mike Curran                            |
++-------------------------------------+----------------------------------------+
+| Chief Financial Officer             | VP Digital Transformation              |
++-------------------------------------+----------------------------------------+
+| Lynda Nicolino                      | Kristina Nifora                        |
++-------------------------------------+----------------------------------------+
+| EVP/Chief Legal and Risk Officer    | VP Deputy General Counsel              |
++-------------------------------------+----------------------------------------+
+| Lawrence Jones                      | Chris Grunwald                         |
++-------------------------------------+----------------------------------------+
+| EVP/Chief Lending Officer           | VP Corporate Strategy                  |
++-------------------------------------+----------------------------------------+
+| Melissa Feeney                      | Jenna Amato                            |
++-------------------------------------+----------------------------------------+
+| EVP/Chief Administrative Officer    | VP Marketing                           |
++-------------------------------------+----------------------------------------+
+| Emilio Cooper                       | Jennifer Aguayo-Tinelli                |
++-------------------------------------+----------------------------------------+
+| EVP/Chief Deposit Officer           | VP Accounting                          |
++-------------------------------------+----------------------------------------+
+| Musadiq Hassanali                   | Kelli Lawyer                           |
++-------------------------------------+----------------------------------------+
+| EVP/Chief Transformation Officer    | VP Human Resources                     |
++-------------------------------------+----------------------------------------+
+| Brian Buggé                         | Joellen Thivierge                      |
++-------------------------------------+----------------------------------------+
+| SVP Accounting & Finance            | VP Learning & Development              |
++-------------------------------------+----------------------------------------+
+| David Bogdanski                     | Andrew Lendzioszek                     |
++-------------------------------------+----------------------------------------+
+| SVP Internal Audit                  | VP Commercial Credit & Loan Servicing  |
++-------------------------------------+----------------------------------------+
+| Larry Trivigno                      | Christine Powell                       |
++-------------------------------------+----------------------------------------+
+| SVP Business & Community Engagement | VP Financial Crimes                    |
++-------------------------------------+----------------------------------------+
+| Linda Siblano                       | Laura Bressmer                         |
++-------------------------------------+----------------------------------------+
+| SVP Compliance Officer              | VP Enterprise & Third-Party Risk Mgmt. |
++-------------------------------------+----------------------------------------+
+| Diane Krieger                       | Susan Cody                             |
++-------------------------------------+----------------------------------------+
+| SVP Organizational Development/HCMS | VP Lending Portfolio Analytics         |
++-------------------------------------+----------------------------------------+
+| Chris Koulouris                     | Christopher Walsh                      |
++-------------------------------------+----------------------------------------+
+| SVP Strategy & Marketing            | VP Consumer Lending Product Mgmt.      |
++-------------------------------------+----------------------------------------+
+| Robert Fish                         | Laura Burnup                           |
++-------------------------------------+----------------------------------------+
+| SVP Commercial Lending Asset Mgmt.  | VP Member Experience                   |
++-------------------------------------+----------------------------------------+
+| John Witterschein                   | Michael D'Amato                        |
++-------------------------------------+----------------------------------------+
+| SVP Consumer Lending                | VP Finance & Treasury                  |
++-------------------------------------+----------------------------------------+
+| Paul 'Kip' James                    | Lavanya Gottipati                      |
++-------------------------------------+----------------------------------------+
+| SVP Information & Cyber Security    | VP Value Realization Office            |
++-------------------------------------+----------------------------------------+
+| Robert Lund                         | Matthew Daccursio                      |
++-------------------------------------+----------------------------------------+
+| VP Residential Mortgage             | VP Technology Management               |
++-------------------------------------+----------------------------------------+
+| Tara Labriola                       | Madhuri Panwar                         |
++-------------------------------------+----------------------------------------+
+| VP Retail Banking                   | VP Enterprise Data & Analytics Office  |
++-------------------------------------+----------------------------------------+
+
+
+
+------------------------
+output:
+("entity"{tuple_delimiter}LINDA ARMYN{tuple_delimiter}staff{tuple_delimiter}Linda Armyn is the President & CEO of the organization, responsible for overall leadership and strategic direction)
+{record_delimiter}
+("entity"{tuple_delimiter}ANTHONY J. EDELMAN{tuple_delimiter}staff{tuple_delimiter}Anthony J. Edelman is the VP of Support Services, overseeing operational support functions)
+{record_delimiter}
+("entity"{tuple_delimiter}TOM ACTON{tuple_delimiter}staff{tuple_delimiter}Tom Acton is the Chief Financial Officer, responsible for financial management and reporting)
+{record_delimiter}
+("entity"{tuple_delimiter}MIKE CURRAN{tuple_delimiter}staff{tuple_delimiter}Mike Curran is the VP of Digital Transformation, leading digital innovation initiatives)
+{record_delimiter}
+("entity"{tuple_delimiter}LYNDA NICOLINO{tuple_delimiter}staff{tuple_delimiter}Lynda Nicolino is the EVP/Chief Legal and Risk Officer, managing legal and risk-related matters)
+{record_delimiter}
+("entity"{tuple_delimiter}KRISTINA NIFORA{tuple_delimiter}staff{tuple_delimiter}Kristina Nifora is the VP Deputy General Counsel, supporting legal operations)
+{record_delimiter}
+("entity"{tuple_delimiter}LAWRENCE JONES{tuple_delimiter}staff{tuple_delimiter}Lawrence Jones is the EVP/Chief Lending Officer, overseeing lending operations)
+{record_delimiter}
+("entity"{tuple_delimiter}CHRIS GRUNWALD{tuple_delimiter}staff{tuple_delimiter}Chris Grunwald is the VP of Corporate Strategy, focusing on strategic planning)
+{record_delimiter}
+("entity"{tuple_delimiter}MELISSA FEENEY{tuple_delimiter}staff{tuple_delimiter}Melissa Feeney is the EVP/Chief Administrative Officer, managing administrative functions)
+{record_delimiter}
+("entity"{tuple_delimiter}JENNA AMATO{tuple_delimiter}staff{tuple_delimiter}Jenna Amato is the VP of Marketing, responsible for marketing strategies and campaigns)
+{record_delimiter}
+("entity"{tuple_delimiter}EMILIO COOPER{tuple_delimiter}staff{tuple_delimiter}Emilio Cooper is the EVP/Chief Deposit Officer, overseeing deposit-related operations)
+{record_delimiter}
+("entity"{tuple_delimiter}JENNIFER AGUAYO-TINELLI{tuple_delimiter}staff{tuple_delimiter}Jennifer Aguayo-Tinelli is the VP of Accounting, managing financial accounting processes)
+{record_delimiter}
+("entity"{tuple_delimiter}MUSADIQ HASSANALI{tuple_delimiter}staff{tuple_delimiter}Musadiq Hassanali is the EVP/Chief Transformation Officer, leading organizational transformation efforts)
+{record_delimiter}
+("entity"{tuple_delimiter}KELLI LAWYER{tuple_delimiter}staff{tuple_delimiter}Kelli Lawyer is the VP of Human Resources, managing HR functions and employee relations)
+{record_delimiter}
+("entity"{tuple_delimiter}BRIAN BUGGÉ{tuple_delimiter}staff{tuple_delimiter}Brian Buggé is the SVP of Accounting & Finance, overseeing financial operations and reporting)
+{record_delimiter}
+("entity"{tuple_delimiter}JOELLEN THIVIERGE{tuple_delimiter}staff{tuple_delimiter}Joellen Thivierge is the VP of Learning & Development, focusing on employee training and development)
+{record_delimiter}
+("entity"{tuple_delimiter}DAVID BOGDANSKI{tuple_delimiter}staff{tuple_delimiter}David Bogdanski is the SVP of Internal Audit, responsible for auditing and compliance)
+{record_delimiter}
+("entity"{tuple_delimiter}ANDREW LENDZIOSZEK{tuple_delimiter}staff{tuple_delimiter}Andrew Lendzioszek is the VP of Commercial Credit & Loan Servicing, managing commercial credit operations)
+{record_delimiter}
+("entity"{tuple_delimiter}LARRY TRIVIGNO{tuple_delimiter}staff{tuple_delimiter}Larry Trivigno is the SVP of Business & Community Engagement, fostering community relationships)
+{record_delimiter}
+("entity"{tuple_delimiter}CHRISTINE POWELL{tuple_delimiter}staff{tuple_delimiter}Christine Powell is the VP of Financial Crimes, overseeing fraud prevention and compliance)
+{record_delimiter}
+("entity"{tuple_delimiter}LINDA SIBLANO{tuple_delimiter}staff{tuple_delimiter}Linda Siblano is the SVP Compliance Officer, ensuring regulatory compliance)
+{record_delimiter}
+("entity"{tuple_delimiter}LAURA BRESSMER{tuple_delimiter}staff{tuple_delimiter}Laura Bressmer is the VP of Enterprise & Third-Party Risk Management, managing organizational risks)
+{record_delimiter}
+("entity"{tuple_delimiter}DIANE KRIEGER{tuple_delimiter}staff{tuple_delimiter}Diane Krieger is the SVP of Organizational Development/HCMS, focusing on organizational growth and systems)
+{record_delimiter}
+("entity"{tuple_delimiter}SUSAN CODY{tuple_delimiter}staff{tuple_delimiter}Susan Cody is the VP of Lending Portfolio Analytics, analyzing lending portfolios)
+{record_delimiter}
+("entity"{tuple_delimiter}CHRIS KOULOURIS{tuple_delimiter}staff{tuple_delimiter}Chris Koulouris is the SVP of Strategy & Marketing, leading strategic marketing initiatives)
+{record_delimiter}
+("entity"{tuple_delimiter}CHRISTOPHER WALSH{tuple_delimiter}staff{tuple_delimiter}Christopher Walsh is the VP of Consumer Lending Product Management, managing consumer lending products)
+{record_delimiter}
+("entity"{tuple_delimiter}ROBERT FISH{tuple_delimiter}staff{tuple_delimiter}Robert Fish is the SVP of Commercial Lending Asset Management, overseeing commercial lending assets)
+{record_delimiter}
+("entity"{tuple_delimiter}LAURA BURNUP{tuple_delimiter}staff{tuple_delimiter}Laura Burnup is the VP of Member Experience, focusing on improving customer experience)
+{record_delimiter}
+("entity"{tuple_delimiter}JOHN WITTERSCHEIN{tuple_delimiter}staff{tuple_delimiter}John Witterschein is the SVP of Consumer Lending, managing consumer lending operations)
+{record_delimiter}
+("entity"{tuple_delimiter}MICHAEL D'AMATO{tuple_delimiter}staff{tuple_delimiter}Michael D'Amato is the VP of Finance & Treasury, managing financial planning and treasury functions)
+{record_delimiter}
+("entity"{tuple_delimiter}PAUL 'KIP' JAMES{tuple_delimiter}staff{tuple_delimiter}Paul 'Kip' James is the SVP of Information & Cyber Security, ensuring cybersecurity and information protection)
+{record_delimiter}
+("entity"{tuple_delimiter}LAVANYA GOTTIPATI{tuple_delimiter}staff{tuple_delimiter}Lavanya Gottipati is the VP of Value Realization Office, focusing on value-driven initiatives)
+{record_delimiter}
+("entity"{tuple_delimiter}ROBERT LUND{tuple_delimiter}staff{tuple_delimiter}Robert Lund is the VP of Residential Mortgage, managing residential mortgage operations)
+{record_delimiter}
+("entity"{tuple_delimiter}MATTHEW DACCURSIO{tuple_delimiter}staff{tuple_delimiter}Matthew Daccursio is the VP of Technology Management, overseeing technology infrastructure)
+{record_delimiter}
+("entity"{tuple_delimiter}TARA LABRIOLA{tuple_delimiter}staff{tuple_delimiter}Tara Labriola is the VP of Retail Banking, managing retail banking operations)
+{record_delimiter}
+("entity"{tuple_delimiter}MADHURI PANWAR{tuple_delimiter}staff{tuple_delimiter}Madhuri Panwar is the VP of Enterprise Data & Analytics Office, focusing on data and analytics strategies)
+{record_delimiter}
+("entity"{tuple_delimiter}NET INCOME{tuple_delimiter}net_income{tuple_delimiter}Net income for the organization was $47,527 in the current year and $46,673 in the previous year)
+{record_delimiter}
+("entity"{tuple_delimiter}TOTAL NON-INTEREST EXPENSES{tuple_delimiter}operating_expense{tuple_delimiter}Total non-interest expenses amounted to $276,130 in the current year and $242,286 in the previous year)
+{record_delimiter}
+("relationship"{tuple_delimiter}LINDA ARMYN{tuple_delimiter}NET INCOME{tuple_delimiter}As President & CEO, Linda Armyn is responsible for overseeing the organization's financial performance, including net income{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}TOM ACTON{tuple_delimiter}TOTAL NON-INTEREST EXPENSES{tuple_delimiter}As Chief Financial Officer, Tom Acton is responsible for managing and reporting on operating expenses{tuple_delimiter}9)
+{completion_delimiter}
+#############################
+
+
+
+-Real Data-
+######################
+entity_types: [credit_union, member, board_of_directors, volunteer, staff, branch, financial_report, foundation, scholarship, grant, loan, community_involvement, philanthropy, financial_service, governance_structure, membership, survey_tool, digital_banking, mobile_app, financial_education, non_profit, charitable_organization, investment, asset, liability, equity, operating_expense, net_income, audit_committee, regulatory_agency, financial_statement, real_estate, mortgage, credit_card, consumer_loan, vehicle_loan, retirement_plan, 401k_plan, lease, property_and_equipment, community_event, partnership, fraud_protection, technology_infrastructure, military_banking, scholarship_program, financial_literacy, youth_program, housing_initiative, food_drive, employee, customer_experience, awards_and_recognition]
+text: {input_text}
+######################
+output:

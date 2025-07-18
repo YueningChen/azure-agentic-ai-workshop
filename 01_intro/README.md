@@ -31,7 +31,3 @@
 ## Hands-On Labs
 ![](./images/labs.jpg)
 ### [Agentic AI Labs PDF link](./agentic_ai_labs.pdf)
-
-
-
-

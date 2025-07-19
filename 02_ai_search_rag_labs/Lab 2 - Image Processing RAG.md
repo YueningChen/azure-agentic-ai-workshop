@@ -2,6 +2,8 @@
 
 In this lab, we will implement a Retrieval-Augmented Generation (RAG) system that focuses on both text and image processing. The goal is to use Azure AI Search to vectorize image data and then use it to answer questions related to the images.
 
+![Lab 2 - Advanced RAG with Image Processing](./images/Lab2-Flow.png)
+
 ## Step 1: Create a Python Function App
 
 1. Go to the [Azure Portal](https://portal.azure.com/).

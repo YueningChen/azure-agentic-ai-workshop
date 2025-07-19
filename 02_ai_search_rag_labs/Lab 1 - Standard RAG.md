@@ -2,6 +2,8 @@
 
 In this lab, we will implement a standard Retrieval-Augmented Generation (RAG) system using a simple dataset. The goal is to use the built-in Vectorization capabilities of Azure AI Search to vectorize our data and then use it to answer questions.
 
+![Lab 1 - Standard RAG](./images/Lab1-Flow.png)
+
 ## Step 1: Set Up Azure Storage Account
 
 1. Click Home in the Azure Portal to return to the main dashboard.

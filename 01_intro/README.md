@@ -34,7 +34,7 @@
 
 ## Hands-On Labs
 
-![Day 1 Lab details](./images/Day1-labs.png)
+![Day 1 Lab details](./images/Day1-Labs.png)
 ![Day 2 Lab details](./images/labs.jpg)
 
 ### [Agentic AI Labs PDF link](./agentic_ai_labs.pdf)

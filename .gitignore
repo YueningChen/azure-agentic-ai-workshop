@@ -19,8 +19,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# VS Code settings
+.env
 .vscode/
 
 # PyCharm settings

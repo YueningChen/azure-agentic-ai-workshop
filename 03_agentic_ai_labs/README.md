@@ -13,7 +13,7 @@ pip install semantic-kernel[azure]
 Before running an Azure AI Agent, modify your .env file to include:
 
 ```bash
-AZURE_AI_AGENT_PROJECT_CONNECTION_STRING = "<example-connection-string>"
+AZURE_AI_AGENT_ENDPOINT = "<example-connection-string>"
 AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME = "<example-model-deployment-name>"
 AZURE_AI_AGENT_API_VERSION="<chat-model-version>"
 ```

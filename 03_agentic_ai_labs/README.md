@@ -18,15 +18,6 @@ AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME = "<example-model-deployment-name>"
 AZURE_AI_AGENT_API_VERSION="<chat-model-version>"
 ```
 
-or
-
-```bash
-AZURE_AI_AGENT_MODEL_DEPLOYMENT_NAME = "<example-model-deployment-name>"
-AZURE_AI_AGENT_ENDPOINT = "<example-endpoint>"
-AZURE_AI_AGENT_SUBSCRIPTION_ID = "<example-subscription-id>"
-AZURE_AI_AGENT_RESOURCE_GROUP_NAME = "<example-resource-group-name>"
-AZURE_AI_AGENT_PROJECT_NAME = "<example-project-name>"
-```
 
 The project connection string is of the following format: `<HostName>;<AzureSubscriptionId>;<ResourceGroup>;<ProjectName>`. See [here](https://learn.microsoft.com/en-us/azure/ai-services/agents/quickstart?pivots=programming-language-python-azure#configure-and-run-an-agent) for information on obtaining the values to populate the connection string.
 

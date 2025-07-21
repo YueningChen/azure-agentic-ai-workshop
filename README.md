@@ -28,11 +28,11 @@ This workshop is ideal for:
 
 ## Hands-On Labs
 
-### Day 1 Lab details
+### [Day 1 Lab](./02_ai_search_rag_labs/README.md) details
 
 ![Day 1 Lab details](./01_intro/images/Day1-Labs.png)
 
-### Day 2 Lab details
+### [Day 2 Lab](./03_agentic_ai_labs/README.md) details
 
 ![Day 2 Labs details](./01_intro/images/labs.jpg)
 
@@ -67,6 +67,9 @@ cd azure-agentic-ai-workshop
 ```
 
 ### Environment Setup (.devcontainer)
+
+> Note: If you are on Mac with Apple Silicon, edit the file .devcontainer/Dockerfile and change the version of the image to `2.0` such as below.
+> ![Edit Dockerfile](02_ai_search_rag_labs/images/edit_dockerfile.png)
 
 1. Open the repository in Visual Studio Code in a new window.
 2. If prompted, click on "Reopen in Container" to set up the development environment

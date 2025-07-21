@@ -106,6 +106,15 @@ cd azure-agentic-ai-workshop
    Follow the installation instructions for your operating system (Windows, macOS, or Linux).
    After installation, open a new terminal or command prompt and run git --version to verify Git is installed correctly.
 
+- #### Install Azure Functions Core Tools (required if running locally)
+
+   Download and install Azure Functions Core Tools from: <https://learn.microsoft.com/azure/azure-functions/functions-run-local>
+   Run the following command to verify installation:
+
+   ```bash
+   func --version
+   ```
+
 #### 1. Create a Python virtual environment
 
 ```bash

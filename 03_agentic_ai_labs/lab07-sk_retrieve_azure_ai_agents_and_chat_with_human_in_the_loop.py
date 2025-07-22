@@ -1,4 +1,5 @@
 # Copyright (c) Microsoft. All rights reserved.
+# This lab is to experiment retrieving Azure AI Agents created and hosted in Azure AI Foundry and chat with human in the loop.
 
 import asyncio
 import sys
@@ -47,7 +48,8 @@ async def get_agents(client) -> list[Agent]:
 
 
     writer_definition = await client.agents.get_agent(
-        agent_id="asst_GScTtjj5TElXfH6BOimYX3OZ",
+        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. ArtDirector
+        agent_id="<replace-with-your-writer-agent-id>", 
     )
 
     writer = AzureAIAgent(
@@ -56,7 +58,8 @@ async def get_agents(client) -> list[Agent]:
     )
 
     reviewer_definition = await client.agents.get_agent(
-        agent_id="asst_cieudXhiHZ6jsyw49wCF6RiL",
+        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. CopyWriter
+        agent_id="<replace-with-your-reviewer-agent-id>", 
     )
 
     reviewer = AzureAIAgent(

@@ -48,8 +48,8 @@ async def get_agents(client) -> list[Agent]:
 
 
     writer_definition = await client.agents.get_agent(
-        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. ArtDirector
-        agent_id="<replace-with-your-writer-agent-id>", 
+        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. Writer
+        agent_id="asst_wh4EdCqWXMFZ0fn4uEutbED5", 
     )
 
     writer = AzureAIAgent(
@@ -58,8 +58,8 @@ async def get_agents(client) -> list[Agent]:
     )
 
     reviewer_definition = await client.agents.get_agent(
-        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. CopyWriter
-        agent_id="<replace-with-your-reviewer-agent-id>", 
+        # you can find the agent id in the Azure AI Foundry project under 'Agents' section. e.g. rename it to Reviewer
+        agent_id="asst_ip0yeKZzMFbxRmrQbPq5uMFQ", 
     )
 
     reviewer = AzureAIAgent(
